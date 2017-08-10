@@ -1,0 +1,42 @@
+The extension we came up with is a Movie Suggestion System, which will give users several suggested movies based on the actors they input. Its essense is to come up with a bunch of movies that contain as much those actors as possible.
+For example, if the user entered Leonardo, Dicaprio and Winsleter, Kate, he or she will get Titanic, 1997 in the first place. Or say, Titanic will be the first priority movie the system will come up with; then it will also print out some movies with Leonard or Winsleter individually. 
+
+We also created a new field inside movie object called "pr" (means priority.) It is used only in the extension and it means to recorded how many actors inputted are in this same movie. And we decided to give the first actor inputted the highest priority because it is nature to assume that user would type his or her most favorate actor in the first place. In my program if the user entered 5 actors, the first actor will have priority 5, the second will have 4 and etc..The movie contains the first and second actor will have a priority 5+4=9. 
+Then my program will output at most 10 suggested movies and some associated informations, including their years and their actors which the user also entered.
+
+A concrete example of how to run this program and the output:
+First "make extension"
+Second "./extension movie_casts.tsv" ------the argument passed in should be a text file containing the movie casts in the same format as movie_casts.tsv.
+
+Then in the command line, the program will prompt the user to input some actors' name then finished with a "END"
+Assume we input the following,
+ENSIGN, MICHAEL
+FISHER, FRANCES (I)
+FLETCHER, ANNE
+GARBER, VICTOR
+GRAHAM, RICHARD (I)
+MARTIN, JOHNNY (I)
+NUCCI, DANNY
+PAXTON, BILL
+END
+
+
+Then the program will process them and output into a file in the current directory called suggestion.tsv.
+This is the example output processed from the above input.
+
+*********Suggested Movies********
+Movie name-----Year-----Actors
+TITANIC-----1997----- <ENSIGN, MICHAEL>  <FISHER, FRANCES (I)>  <FLETCHER, ANNE>  <GARBER, VICTOR>  <GRAHAM, RICHARD (I)>  <MARTIN, JOHNNY (I)>  <NUCCI, DANNY>  <PAXTON, BILL> 
+BRINGING DOWN THE HOUSE-----2003----- <ENSIGN, MICHAEL>  <FLETCHER, ANNE> 
+SECRETS OF A CHAMBERMAID-----1998----- <ENSIGN, MICHAEL> 
+RED WING-----2013----- <FISHER, FRANCES (I)>  <PAXTON, BILL> 
+CHILDREN OF THE CORN III: URBAN HARVEST-----1995----- <ENSIGN, MICHAEL> 
+SOLARIS-----2002----- <ENSIGN, MICHAEL> 
+FATAL PURSUIT-----1998----- <ENSIGN, MICHAEL> 
+SUPERMAN-----1978----- <ENSIGN, MICHAEL> 
+BORN YESTERDAY-----1993----- <ENSIGN, MICHAEL> 
+SEABISCUIT-----2003----- <ENSIGN, MICHAEL> 
+
+
+
+
